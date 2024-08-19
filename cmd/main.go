@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"os"
 
-	"plutus.io/plutus/pkg/infrastructure/resource"
+	"plutus.io/plutus/pkg/library/resource"
 )
 
 var (
@@ -25,7 +25,6 @@ func init() {
 }
 
 func main() {
-	// if execType == "web" {
-
-	// }
+	// 根context
+	//ctx := context.Background()
 }

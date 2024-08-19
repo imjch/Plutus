@@ -5,8 +5,8 @@ import (
 	"sync"
 
 	"plutus.io/plutus/pkg/domain/entity"
-	"plutus.io/plutus/pkg/infrastructure/resource"
 	"plutus.io/plutus/pkg/infrastructure/utils"
+	"plutus.io/plutus/pkg/library/resource"
 )
 
 type FundImpl struct {
@@ -30,7 +30,8 @@ func (f *FundImpl) Get(ids []string) (map[string]*entity.Fund, error) {
 		go func(id string) {
 			defer func() {
 				if e := recover(); e != nil {
-					resource.Slog.Warn("errFundGetPanic:%w", e)
+					//resource.Slog.Warn("errFundGetPanic:%w", e)
+
 				}
 				wg.Done()
 			}()
